@@ -70,7 +70,7 @@ body{
 }
 .cont_pres_derecha{
     width: 100%;
-    background-image: url("/images/fondo.webp") ;    
+    background-image: url("../images/fondo.webp") ;    
     background-repeat: no-repeat;
     opacity: 0.4;
     min-height: 800px;
