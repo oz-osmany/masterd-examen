@@ -3,52 +3,52 @@
     {
         "id":1,
         "producto":"Samsung",
-        "imagen":"../images/samsung.png"
+        "imagen":"./images/samsung.png"
     },
     {
         "id":2,
         "producto":"Apple",
-        "imagen":"../images/iphone.png"
+        "imagen":"./images/iphone.png"
     },
     {
         "id":3,
         "producto":"Huawei",
-        "imagen":"../images/huawei.png"
+        "imagen":"./images/huawei.png"
     },
     {
         "id":4,
         "producto":"Nokia",
-        "imagen":"../images/nokia.png"
+        "imagen":"./images/nokia.png"
     },
     {
         "id":5,
         "producto":"Sony",
-        "imagen":"../images/sony.png"
+        "imagen":"./images/sony.png"
     },
     {
         "id":6,
         "producto":"Lg",
-        "imagen":"../images/lg.png"
+        "imagen":"./images/lg.png"
     },
     {
         "id":7,
         "producto":"HTC",
-        "imagen":"../images/ht.png"
+        "imagen":"./images/ht.png"
     },
     {
         "id":8,
         "producto":"Motorola",
-        "imagen":"../images/motorola.png"
+        "imagen":"./images/motorola.png"
     },
     {
         "id":9,
         "producto":"Lenovo",
-        "imagen":"../images/lenovocell.png"
+        "imagen":"./images/lenovocell.png"
     },
     {
         "id":10,
         "producto":"Xiaomi",
-        "imagen":"../images/xiaomi.png"
+        "imagen":"./images/xiaomi.png"
     }
    
 ]

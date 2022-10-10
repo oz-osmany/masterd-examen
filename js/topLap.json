@@ -3,52 +3,52 @@
     {
         "id":1,
         "producto":"Apple",
-        "imagen":"../images/apple.png"
+        "imagen":"./images/apple.png"
     },
     {
         "id":2,
         "producto":"Lenovo",
-        "imagen":"../images/lenovo.png"
+        "imagen":"./images/lenovo.png"
     },
     {
         "id":3,
         "producto":"HP",
-        "imagen":"../images/hp.png"
+        "imagen":"./images/hp.png"
     },
     {
         "id":4,
         "producto":"Dell",
-        "imagen":"../images/dell.png"
+        "imagen":"./images/dell.png"
     },
     {
         "id":5,
         "producto":"Samsung",
-        "imagen":"../images/laptopsamsung.png"
+        "imagen":"./images/laptopsamsung.png"
     },
     {
         "id":6,
         "producto":"Acer",
-        "imagen":"../images/acer.png"
+        "imagen":"./images/acer.png"
     },
     {
         "id":7,
         "producto":"MSI",
-        "imagen":"../images/msi.png"
+        "imagen":"./images/msi.png"
     },
     {
         "id":8,
         "producto":"Asus",
-        "imagen":"../images/asus.png"
+        "imagen":"./images/asus.png"
     },
     {
         "id":7,
         "producto":"Microsoft",
-        "imagen":"../images/microsoft.png"
+        "imagen":"./images/microsoft.png"
     },
     {
         "id":7,
         "producto":"Toshiba",
-        "imagen":"../images/toshiba.png"
+        "imagen":"./images/toshiba.png"
     }
 ]}
 
