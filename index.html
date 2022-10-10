@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script >
+        function cargar() {
+            noticias();
+            topCell();
+            topLap();
+         
+        }
+        function noticias(){
+            $.ajax({
+                url: './js/datos.json',
+                type: 'GET',
+                success: function (data) {
+                   
+                    cadena=data.ficha.map(
+                        noticia =>{
+                    return (`<div class="noticias_card" key=${noticia.id}>
+                    <div><img src=${noticia.url}></img></div>
+                    <div>
+                        <p>${noticia.texto}</p>
+                    </div>
+                    </div>`)
+                    }
+                    )
+                  
+                $("#caja").html(cadena);
+                },
+                error: function (xhr, status) {
+                    alert('Disculpe, existió un problema');
+                }
+            });
+        }
+        function topCell(){
+            $.ajax({
+                url: './js/topCell.json',
+                type: 'GET',
+                success: function (data) {
+                   
+                    cadena=data.topCell.map(item =>{
+                            return (`<div class="cont_flex card_top_ten" key=${item.id}>
+                            <div class="noticias_card card_grid">${item.producto}</div>
+                            <div class="mr-10 flex_pad"><img src=${item.imagen} class="top_img_cel"></img></div>
+                            
+                            </div>`)
+                    }
+                    )
+                  
+                $("#cell").html(cadena);
+                },
+                error: function (xhr, status) {
+                    alert('Disculpe, existió un problema');
+                }
+            });
+        }
+        function topLap(){
+            $.ajax({
+                url: './js/topLap.json',
+                type: 'GET',
+                success: function (data) {
+                   
+                    cadena=data.topLap.map(item =>{
+                        return (`<div class="cont_flex card_top_ten" key=${item.id}>
+                                <div class="noticias_card card_grid">${item.producto}</div>
+                                <div class="mr-10 flex_pad"><img src=${item.imagen} class="top_img"></img></div>
+                                
+                                </div>`)
+                    }
+                    )
+                  
+                $("#laptop").html(cadena);
+                },
+                error: function (xhr, status) {
+                    alert('Disculpe, existió un problema');
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="cargar()">
+    <div class="container">
+        <!-- Aqui va el Navegador -->
+        <div class="navegador">
+            <div class="container_interior">
+                <div>
+                    <!-- Logo -->
+                    <img src="./images/logoazul.png" alt="logo" class="logo">
+                 </div>
+                <div class="navbar">
+                    <!-- Navegacion -->
+                    <ul class="nav">
+                        <li><a href="./index.html" class="resaltar">Home</a></li>
+                        <li><a href="./views/contacto.html">Contacto</a></li>
+                        <li><a href="./views/gallery.html">Galería</a></li>
+                        <li><a href="./views/presupuesto.html">Presupuesto</a></li>
+                        <!-- <li><a href="./views/productos.html">Producto</a></li> -->
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+        <!-- Aqui va el Hero -->
+        <section >
+            <div >
+                <img src="./images/teclado.jpg" alt="banner" class="hero">
+            </div>
+        </section>   
+        <!-- Informacion de nuestra empresa -->
+        <div class="container_interior cont_int cont_card">
+            <div class="container_between">
+                <!-- Quienes somos -->
+                <section class="card_info">
+                    <div>
+                        <h1 class="title_card">Quienes somos</h1>
+                    </div>
+                    <div class="card_subtitle">
+                        <p class="subtitle_p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ratione nesciunt vitae tempore, maiores eum minus vero nam sequi! Expedita excepturi culpa provident impedit est autem, deserunt dolores consequuntur dolorum?
+                        </p>
+                    </div>
+                </section>
+                <!-- Nuestra mision -->
+                <section class="card_info">
+                    <div>
+                        <h1 class="title_card">Nuestra misión</h1>
+                    </div>
+                    <div class="card_subtitle">
+                        <p class="subtitle_p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ratione nesciunt vitae tempore, maiores eum minus vero nam sequi! Expedita excepturi culpa provident impedit est autem, deserunt dolores consequuntur dolorum?
+                        </p>
+                    </div>
+                </section>
+                <!-- Nuestra vision -->
+                <section class="card_info">
+                    <div>
+                        <h1 class="title_card">Nuestra visión</h1>
+                    </div>
+                    <div class="card_subtitle">
+                        <p class="subtitle_p">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ratione nesciunt vitae tempore, maiores eum minus vero nam sequi! Expedita excepturi culpa provident impedit est autem, deserunt dolores consequuntur dolorum?
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>    
+        <!-- Aqui van las noticias -->
+        <article class="container_interior cont_int fin_not">
+            <header class="title">
+                <h1 class="top_title">Últimas noticias</h1>
+            </header>
+            <section class="noticias cont_noticias" id="caja">   
+            </section>
+            
+        </article> 
+        <!-- Aqui va el top ten -->
+        <article class=" fin_not cont_top">
+            <!-- Para la parte de los moviles -->
+            <header class="title">
+                <h1 class="top_title">Top Ten en nuestras tecnologías</h1>
+            </header>
+            <div class="cont_flex-around ">
+                <section >
+                    <fieldset>
+                        <legend>Móviles</legend>
+                        <div  id="cell" >
+                
+                        </div>
+                    </fieldset>
+                   
+                </section>
+                <!-- Para la parte de las laptops -->
+                <section>
+                    <fieldset>
+                        <legend>Laptops</legend>
+                        <div  id="laptop">
+                
+                        </div>
+                    </fieldset>
+                </section>
+            </div>
+        </article>
+        <!-- Aqui va el footer -->
+        <div class="footer">
+            <div class="container_interior cont_center">
+                <!-- Redes sociales -->
+                <div class="iconos">
+                    <img src="./images/icon-facebook.svg" alt="facebook" class="icon_img"/>
+                    <img src="./images/icon-instagram.svg" alt="instagram" class="icon_img"/>
+                    <img src="./images/icon-pinterest.svg" alt="pinterest" class="icon_img"/>
+                    <img src="./images/icon-twitter.svg" alt="twitter" class="icon_img"/>
+                </div>
+                <!-- Direccion de la empresa -->
+                <div>
+                    <p>Muralla #1289 entre Josefina y Maloja, Habana Cuba</p>
+                </div>
+                <!-- Aviso legal -->
+                <div>
+                   <p>Aviso legal</p>     
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="./js/noticias.js"></script>
+
+</body>
+</html>

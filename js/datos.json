@@ -1,0 +1,36 @@
+
+{
+    "ficha":[
+      {
+        "id" : 1, 
+        "url" : "../images/gsmarena_000.jpg",
+        "texto":"Aunque el vivo X80 Pro+ aún no se ha lanzado, el informante Ice Universe cree que el X90 Pro+ está a punto de anunciarse este diciembre con algunas especificaciones impresionantes. Sospechamos que este sería el anuncio chino y el mercado global..."
+    },
+    {
+        "id" : 2,
+         "url" : "../images/gsmarena_001.jpg",
+         "texto":"Como habrás escuchado, las nuevas cámaras del iPhone 14 Pro y el iPhone 14 Pro Max tienen un problema con las aplicaciones de terceros que hace que sus sistemas OIS o de enfoque automático se vuelvan locos y vibren sin control. Apple es consciente del problema y está trabajando en un..."
+    
+    },
+    {
+        "id" : 3,
+        "url" : "../images/gsmarena_002.jpg",
+        "texto":"El OnePlus 10R Prime Blue Edition presentado la semana pasada se lanzará el 22 de septiembre. ¡Algo #OutOfTheBlue se acerca para brindarle la experiencia de teléfono inteligente que siempre estuvo buscando! ¡Esté atento a @amazonIN para saber más!— OnePlus India..."
+    },
+    {
+        "id" : 4,
+         "url" : "../images/gsmarena_003.jpg",
+         "texto":"El iPhone 14 finalmente está en manos de los usuarios y Zach, también conocido como JerryRigEverything, está aquí para probar su durabilidad con su conjunto habitual de pruebas que incluyen rasguños, quemaduras y dobladuras. El diseño del 14 se hereda principalmente del iPhone del año pasado...."
+    },
+    {
+        "id" : 5,
+        "url" : "../images/gsmarena_005.jpg",
+        "texto":"iFixit está ocupado destrozando los nuevos modelos de iPhone 14 y ha descubierto un módem Qualcomm X65 en su interior. Sin embargo, eso no es suficiente para habilitar el nuevo SOS de emergencia a través del servicio satelital que se introdujo con los nuevos modelos. “iPhone 14 incluye..."
+    },
+    {
+        "id" : 6,
+        "url" : "../images/gsmarena_006.jpg",
+        "texto":"Realme ya compartió sus planes para las actualizaciones de Android 13/Realme UI 4.0 en China, y hoy Madhav Sheth, presidente de Realme International, reveló la hoja de ruta para la audiencia global. El primero en la fila es el Realme GT2 Pro, como ya lo es..."
+    }
+    ]
+ }

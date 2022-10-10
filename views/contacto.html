@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Proyecto</title>
+        
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" >
+        <style >
+            #map {
+                height: 800px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Aqui va el Navegador -->
+            <div class="navegador">
+                <div class="container_interior">
+                    <div>
+                        <!-- Logo -->
+                        <img src="../images/logoazul.png" alt="logo" class="logo">
+                    </div>
+                    <div class="navbar mt15">
+                        <!-- Navegacion -->
+                        <ul class="nav">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="./contacto.html" class="resaltar">Contacto</a></li>
+                            <li><a href="./gallery.html" >Galería</a></li>
+                            <li><a href="./presupuesto.html">Presupuesto</a></li>
+                            <!-- <li><a href="./productos.html">Producto</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>   
+            
+                <div class="cont_map_info">
+                    <div class="info_interior">
+                        <div >
+                            <img src="../images/imagen-mapa.jpg" alt="informacion del mapa" class="img_map">
+                        </div>
+                        <div class="info_map info_position">
+                            <div>
+                                <h1 class="title_map pt15">Oz-Tools</h1>
+                            </div>
+                            <div class="title_map pb10">
+                                <button class="btn_map">Indicaciones</button>
+                                <button class="btn_map">Cerca</button>
+                            </div>
+                        </div>
+                        <div class="info_map info_position">
+                            <div class="info_int">
+                                <div class="mt15">
+                                    <div class="cont_flex">
+                                        <i class="fa-solid fa-location-dot mr-10" ></i>
+                                        <p class="info_p">Domstr. 5 · 97070 Würzburg · ~8,4 km</p>
+                                    </div>
+                                </div>
+                                <div class="mt15">
+                                    <div class="cont_flex">
+                                        <i class="fa-solid fa-phone mr-10"></i>
+                                        <p class="info_p">017533789333</p>
+                                    </div>
+                                </div>
+                                <div class="mt15">
+                                    <div class="cont_flex">
+                                        <i class="fa-solid fa-globe mr-10"></i>
+                                        <p class="info_p">oz-tools.com</p>
+                                    </div>
+                                </div>
+                                <div class="mt15">
+                                    <div class="cont_flex">
+                                        <i class="fa-solid fa-clock mr-10"></i>
+                                        <p class="info_p">Abierto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div id="map" ></div>
+            
+            <!-- Aqui va el footer -->
+            <div class="footer">
+                <div class="container_interior cont_center">
+                    <!-- Redes sociales -->
+                    <div class="iconos">
+                        <img src="../images/icon-facebook.svg" alt="facebook" class="icon_img">
+                        <img src="../images/icon-instagram.svg" alt="instagram" class="icon_img">
+                        <img src="../images/icon-pinterest.svg" alt="pinterest" class="icon_img">
+                        <img src="../images/icon-twitter.svg" alt="twitter" class="icon_img">
+                    </div>
+                    <!-- Direccion de la empresa -->
+                    <div>
+                        <p>Domstr. 5 · 97070 Würzburg · ~8,4 km</p>
+                    </div>
+                    <!-- Aviso legal -->
+                    <div>
+                    <p>Aviso legal</p>     
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+        <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js" ></script>
+        <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+        <script>
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(position){
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+        
+                    var map = L.map('map', {
+                        center: [latitude, longitude],
+                        zoom: 12
+                    });
+        
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+                    /*------Definimos un icono inicio---------------*/
+                    var inicio = L.icon({
+                        iconUrl: '../images/leaf-green.png',
+                        shadowUrl: '../images/leaf-shadow.png',
+
+                        iconSize:     [38, 95], // size of the icon
+                        shadowSize:   [50, 64], // size of the shadow
+                        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                        shadowAnchor: [4, 62],  // the same for the shadow
+                        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+                    });
+
+                    /*------Definimos un icono final---------------*/
+                    var final = L.icon({
+                        iconUrl: '../images/leaf-red.png',
+                        shadowUrl: '../images/leaf-shadow.png',
+
+                        iconSize:     [38, 95], // size of the icon
+                        shadowSize:   [50, 64], // size of the shadow
+                        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                        shadowAnchor: [4, 62],  // the same for the shadow
+                        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+                    });
+                    /*------Definimos un icono final---------------*/
+                    var track = L.icon({
+                        iconUrl: '../images/leaf-orange.png',
+                        shadowUrl: '../images/leaf-shadow.png',
+
+                        iconSize:     [38, 95], // size of the icon
+                        shadowSize:   [50, 64], // size of the shadow
+                        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                        shadowAnchor: [4, 62],  // the same for the shadow
+                        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+                    });
+        
+                    var control = L.Routing.control({
+                        waypoints: [
+                            L.latLng(latitude, longitude),
+                            // L.latLng(37.17059, -3.60552)
+                            L.latLng(49.794586, 9.929315)
+                        ],
+                        language: 'es',
+                        createMarker: function(i, wp, nWps) {
+                            switch (i) {
+                                case 0:
+                                return L.marker(wp.latLng, {
+                                    icon: inicio,
+                                    draggable: true
+                                }).bindPopup("<b>" + "Inicio" + "</b>");
+                                case nWps - 1:
+                                return L.marker(wp.latLng, {
+                                    icon: final,
+                                    draggable: true
+                                }).bindPopup("<b>" + "Destino" + "</b>");
+                                default:
+                                return L.marker(wp.latLng, {
+                                    icon: track,
+                                    draggable: true
+                                }).bindPopup("<b>" + "Waypoint" + "</b>");
+                            }
+                        }
+                    }).addTo(map);
+
+                    
+                    
+                });
+            }
+            else{
+                var map = L.map('map', {
+                    // center: [37.17059, -3.60552],
+                    center: [49.794586, 9.929315],
+                    zoom: 17
+                });
+        
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+            }
+        </script>
+    
+    </body>
+</html>
+
