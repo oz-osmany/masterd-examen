@@ -20,18 +20,25 @@
                     <!-- Logo -->
                     <img src="../images/logoazul.png" alt="logo" class="logo">
                  </div>
-                <div class="navbar">
+                 <div>
+                    <img src="../images/icon-hamburger.svg" alt="hamburger icon" class="hamburger" id="hamburger">
+                </div>
+                <div class="navbar " id="navbar">
                     <!-- Navegacion -->
-                    <ul class="nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
+                    <ul class="nav" id="nav">
+                        <li><a href="../index.html" >Home</a></li>
+                        <li><a href="./contacto.html" >Contacto</a></li>
                         <li><a href="./gallery.html">Galería</a></li>
                         <li><a href="./presupuesto.html" class="resaltar">Presupuesto</a></li>
-                        <!-- <li><a href="./productos.html">Producto</a></li> -->
+                        <!-- <li><a href="./views/productos.html">Producto</a></li> -->
                     </ul>
+                    
                 </div>
+                
+                
             </div>
-           
+            
+            <div  id="fondo_menu"></div>
         </div>
         
        <div>
@@ -172,7 +179,7 @@
                                 <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
                             </div>
                 
-                            <div class="cont_flex-around">
+                            <div class="cont_flex-around cont_btn">
                                 <div class="form_btn"><button type="submit" class="formulario__btn">Enviar</button></div>
                                 <div class="form_btn"><button  class="formulario__btn" onclick="reset()">Reset</button></div>
 
@@ -195,23 +202,24 @@
             <div class="container_interior cont_center">
                 <!-- Redes sociales -->
                 <div class="iconos">
-                    <img src="../images/icon-facebook.svg" alt="facebook" class="icon_img">
-                    <img src="../images/icon-instagram.svg" alt="instagram" class="icon_img">
-                    <img src="../images/icon-pinterest.svg" alt="pinterest" class="icon_img">
-                    <img src="../images/icon-twitter.svg" alt="twitter" class="icon_img">
+                    <img src="../images/icon-facebook.svg" alt="facebook" class="icon_img"/>
+                    <img src="../images/icon-instagram.svg" alt="instagram" class="icon_img"/>
+                    <img src="../images/icon-pinterest.svg" alt="pinterest" class="icon_img"/>
+                    <img src="../images/icon-twitter.svg" alt="twitter" class="icon_img"/>
                 </div>
                 <!-- Direccion de la empresa -->
-                <div>
+                <div class="direccion">
                     <p>Domstr. 5 · 97070 Würzburg · ~8,4 km</p>
                 </div>
                 <!-- Aviso legal -->
-                <div>
-                <p>Aviso legal</p>     
+                <div class="direccion">
+                   <p class="direccion_p">Aviso legal</p>     
                 </div>
             </div>
         </div>
     </div>
     <script src="/js/valida.js"></script>
+    <script type="module" src="../js/menu.js"></script>
     <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 </body>
 </html>

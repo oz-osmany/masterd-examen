@@ -18,19 +18,26 @@
                     <!-- Logo -->
                     <img src="../images/logoazul.png" alt="logo" class="logo">
                  </div>
-                <div class="navbar mt15">
+                 <div>
+                    <img src="../images/icon-hamburger.svg" alt="hamburger icon" class="hamburger" id="hamburger">
+                </div>
+                <div class="navbar " id="navbar">
                     <!-- Navegacion -->
-                    <ul class="nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./contacto.html">Contacto</a></li>
+                    <ul class="nav" id="nav">
+                        <li><a href="../index.html" >Home</a></li>
+                        <li><a href="./contacto.html" >Contacto</a></li>
                         <li><a href="./gallery.html" class="resaltar">Galería</a></li>
                         <li><a href="./presupuesto.html">Presupuesto</a></li>
-                        <!-- <li><a href="./productos.html">Producto</a></li> -->
+                        <!-- <li><a href="./views/productos.html">Producto</a></li> -->
                     </ul>
+                    
                 </div>
+                
+                
             </div>
-           
-        </div>        
+            
+            <div  id="fondo_menu"></div>
+        </div>  
         <div class="root">
             <div>
                 <h1 class="title">Nuestros productos</h1>
@@ -105,27 +112,27 @@
     
     <!-- Aqui va el footer -->
     <div class="footer">
-        <div class="container_interior cont_center">
-            <!-- Redes sociales -->
-            <div class="iconos">
-                <img src="../images/icon-facebook.svg" alt="facebook" class="icon_img">
-                <img src="../images/icon-instagram.svg" alt="instagram" class="icon_img">
-                <img src="../images/icon-pinterest.svg" alt="pinterest" class="icon_img">
-                <img src="../images/icon-twitter.svg" alt="twitter" class="icon_img">
-            </div>
-            <!-- Direccion de la empresa -->
-            <div>
-                <p>Domstr. 5 · 97070 Würzburg · ~8,4 km</p>
-            </div>
-            <!-- Aviso legal -->
-            <div>
-               <p>Aviso legal</p>     
+            <div class="container_interior cont_center">
+                <!-- Redes sociales -->
+                <div class="iconos">
+                    <img src="../images/icon-facebook.svg" alt="facebook" class="icon_img"/>
+                    <img src="../images/icon-instagram.svg" alt="instagram" class="icon_img"/>
+                    <img src="../images/icon-pinterest.svg" alt="pinterest" class="icon_img"/>
+                    <img src="../images/icon-twitter.svg" alt="twitter" class="icon_img"/>
+                </div>
+                <!-- Direccion de la empresa -->
+                <div class="direccion">
+                    <p>Domstr. 5 · 97070 Würzburg · ~8,4 km</p>
+                </div>
+                <!-- Aviso legal -->
+                <div class="direccion">
+                   <p class="direccion_p">Aviso legal</p>     
+                </div>
             </div>
         </div>
-    
-    </div>
 </div> 
     <script  src="../js/galeria.js"></script>
+    <script type="module" src="../js/menu.js"></script>
 
 </body>
 </html>

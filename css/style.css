@@ -138,6 +138,9 @@ body{
     align-content: center;
     padding: 2px;
 }
+.fondo_menu{
+    display: none;
+}
 .footer{
     align-items: center;
     background-color: rgb(8, 9, 17);
@@ -149,7 +152,9 @@ body{
     /* position: absolute; */
     /* top: 650px; */
 }
-
+.hamburger{
+    display: none;
+}
 .hero{
     height: 500px;
     width: 100%;
@@ -245,6 +250,11 @@ body{
     margin-right: 20px;
     width: 345px;
 }
+.noticias_card_top{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 345px;
+}
 .pt15{
     padding-top: 15px;
 }
@@ -316,4 +326,117 @@ li{
 }
 i{
     padding-top: 5px;
+}
+
+
+@media screen and (max-width: 500px){
+    .card_form {
+        width: 100%;
+      }
+    .container{
+        width: 375px;
+    }
+    .container_between{
+        display: block;
+    }
+    .cont_center{
+        display: block;
+    }
+    .card_info{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 240px;
+    }
+    .cont_flex-around{
+        display:block
+    }
+    /* .container_interior{
+        display: block;
+    } */
+    .cont_presupueto {
+        
+        top: 100px;
+        left: 0;
+    }
+    .cont_btn{
+        display: flex;
+    }
+    .direccion{
+        padding-top: 10px;        
+        text-align: center;
+    }
+    .direccion_p{
+        margin-top: 10px;
+        margin-bottom: 10px;
+       
+    }
+    .fondo_menu{
+        background-color: rgba(0,0,0,0.3);
+        display: block;
+        height: 100px;
+        left: 0;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        z-index: -1;
+    }
+    .formulario__btn{
+        width: 50%;
+    }
+    .footer{
+        height: 170px;
+    }
+    .hamburger{
+        display: block;
+        margin-top: 14px;
+    }
+    .iconos{
+        width: 100%;
+    }
+    .icon_img {
+        height: 20px;
+        width: 20px;
+      }
+    .logo{
+        height: 30px;
+        width: 40px;
+        margin-top: 8px;
+    }
+    .nav{
+        display: none;
+    }
+    .navbar{
+        display: none;
+        /* position: absolute;
+        top: 80px;
+        left: 35px; */
+    }
+    .noticias_card_top{
+        margin-left: 10px;
+        margin-right: 5px;
+        width: 70%;
+    }
+    .navegador{
+        height: 50px;
+    }
+    .section_l{
+        margin-top: 20px;
+    }
+    .show_menu{
+        position: absolute;
+        top: 80px;
+        left: 35px;
+        display: block;
+    }
+    .title{
+        font-size: 25px;
+    }
+    fieldset{
+        width: 90%;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
